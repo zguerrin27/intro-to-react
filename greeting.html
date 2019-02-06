@@ -34,10 +34,16 @@
 
 
        class Statement extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {date: new Date()};
+          }
+
             render() {
                 return (
                     <div>
                         <p>Hello my name is {this.props.name}, and I love Coding!!!</p>
+                        <p>Today's date is {this.state.date.toLocaleDateString()}.</p>
                     </div>
                 );
             }
